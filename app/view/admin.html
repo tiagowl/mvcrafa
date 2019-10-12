@@ -1,0 +1,22 @@
+<h1>Gerenciador de conteúdo</h1>
+
+<a href="http://localhost/mvcrafa/?pagina=admin&metodo=create">Criar Publicação</a><br><br>
+<hr>
+<br><table border="2" >
+    <tr>
+        <th>Id</th>
+        <th>Título</th>
+        <th>Alteração</th>
+        <th>Deleção</th>
+    </tr>
+
+    {% for postagem in postagens %}
+    <tr>
+        <th>{{postagem.id}}</th>
+        <th>{{postagem.titulo}}</th>
+        <th><a href="http://localhost/mvcrafa/?pagina=admin&metodo=change&id={{postagem.id}}">Alteração</a></th>
+        <th><a href="#">Deleção</a></th>
+    </tr>
+    {% endfor %}
+
+</table>
